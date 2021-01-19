@@ -18,3 +18,15 @@ bin
 pkg
 src
 *.pb.go
+hello/build
+hello/hello_server/.idea
+hello/hello_server/src
+hello/hello_server/build
+hello/hello_server/bin
+hello/hello_server/pkg
+
+hello/hello_client/.idea
+hello/hello_client/src
+hello/hello_client/build
+hello/hello_client/bin
+hello/hello_client/pkg

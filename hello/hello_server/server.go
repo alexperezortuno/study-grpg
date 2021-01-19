@@ -28,7 +28,7 @@ func (*server) Hello(ctx context.Context, req *hellopb.HelloRequest) (*hellopb.H
 func main() {
 	fmt.Println("Hello, Go server is running")
 
-	listen, err := net.Listen("tcp", "0.0.0.0:50051")
+	lis, err := net.Listen("tcp", "0.0.0.0:50051")
 
 	if err != nil {
 		log.Fatalf("Failed to listen %v", err)
@@ -38,7 +38,7 @@ func main() {
 
 	hellopb.RegisterHelloServiceServer(s, &server{})
 
-	if err := s.Server(listen); err != nil {
+	if err := s.Serve(lis); err != nil {
 		log.Fatalf("Failed to serve %v", err)
 	}
 }
