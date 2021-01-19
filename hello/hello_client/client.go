@@ -1,7 +1,7 @@
 package main
 
 import (
-	"../hellopb/"
+	"../hellopb"
 	"fmt"
 	"google.golang.org/grpc"
 	"log"
